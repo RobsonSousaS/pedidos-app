@@ -1,4 +1,4 @@
-/* Estilos Gerais */
+
 .pedido-container {
     max-width: 800px;
     margin: 20px auto;
@@ -17,7 +17,6 @@
     margin-bottom: 25px;
 }
 
-/* Lista de Pedidos */
 .pedido-lista {
     list-style: none;
     padding: 0;
@@ -26,7 +25,7 @@
 
 .pedido-item {
     display: flex;
-    flex-direction: column; /* Coloca os itens verticalmente */
+    flex-direction: column;
     background-color: #ffffff;
     border: 1px solid #ddd;
     padding: 20px;
@@ -37,8 +36,8 @@
 }
 
 .pedido-item:hover {
-    background-color: #f1f1f1; /* Cor de fundo mais clara no hover */
-    transform: translateY(-2px); /* Efeito de elevação */
+    background-color: #f1f1f1;
+    transform: translateY(-2px);
 }
 
 .pedido-detalhes {
@@ -46,43 +45,41 @@
 }
 
 .pedido-detalhes p {
-    margin: 8px 0; /* Ajusta o espaçamento entre parágrafos */
+    margin: 8px 0;
     color: #555;
     font-size: 1rem;
 }
 
 .pedido-detalhes strong {
     color: #333;
-    display: block; /* Exibe cada item em uma nova linha */
-    margin-bottom: 5px; /* Espaçamento inferior para separação */
+    display: block;
+    margin-bottom: 5px;
 }
 
-/* Itens do Pedido */
 .pedido-items {
-    margin-top: 15px; /* Espaçamento acima dos itens */
+    margin-top: 15px;
 }
 
 .pedido-item-info {
-    padding: 10px 0; /* Espaçamento interno para itens */
-    border-bottom: 1px solid #eee; /* Linha separadora sutil */
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
 }
 
 .pedido-item-info:last-of-type {
-    border-bottom: none; /* Remove a linha inferior do último item */
+    border-bottom: none;
 }
 
 .pedido-item-info strong {
     color: #333;
     display: block;
-    font-weight: bold; /* Negrito para os nomes dos itens */
-    margin-bottom: 5px; /* Espaçamento inferior para os nomes dos itens */
+    font-weight: bold;
+    margin-bottom: 5px;
 }
 
-/* Ações de Pedido */
 .pedido-acoes {
     display: flex;
     gap: 12px;
-    margin-top: 15px; /* Espaçamento superior para ações */
+    margin-top: 15px;
 }
 
 .pedido-acoes button {
@@ -94,7 +91,6 @@
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-/* Botão Remover */
 .btn-remover {
     background-color: #e74c3c;
     color: white;
@@ -105,7 +101,6 @@
     transform: translateY(-2px);
 }
 
-/* Botão Atualizar */
 .btn-atualizar {
     background-color: #3498db;
     color: white;
@@ -116,7 +111,6 @@
     transform: translateY(-2px);
 }
 
-/* Botão Adicionar Novo Pedido */
 .add-pedido {
     display: flex;
     justify-content: center;
@@ -138,7 +132,6 @@
     transform: translateY(-2px);
 }
 
-/* Mensagem Quando Não Há Pedidos */
 .mensagem-sem-pedidos {
     font-size: 1.1rem;
     color: #888;
@@ -146,18 +139,17 @@
     margin: 25px 0;
 }
 
-/* Modal de Confirmação */
 .modal {
-    display: none; /* Inicialmente escondido */
+    display: none;
     position: fixed;
-    z-index: 1000; /* Fica acima de outros elementos */
+    z-index: 1000;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba(0, 0, 0, 0.5); /* Fundo escurecido */
-    transition: opacity 0.3s ease; /* Transição suave */
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: opacity 0.3s ease;
 }
 
 .modal-content {
@@ -168,8 +160,8 @@
     width: 90%;
     max-width: 500px;
     position: relative;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
-    animation: fadeIn 0.3s ease; /* Animação de entrada */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.3s ease;
 }
 
 .close-btn {
@@ -183,7 +175,7 @@
 }
 
 .close-btn:hover {
-    color: #e74c3c; /* Cor de destaque no hover */
+    color: #e74c3c;
 }
 
 .modal-content h3 {
@@ -204,10 +196,9 @@
     margin: 10px 5px;
     cursor: pointer;
     font-size: 1rem;
-    transition: background-color 0.3s ease, transform 0.2s ease; /* Transição suave */
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-/* Botão Confirmar */
 .modal-content button.confirm {
     background-color: #e74c3c;
     color: white;
@@ -215,10 +206,9 @@
 
 .modal-content button.confirm:hover {
     background-color: #c0392b;
-    transform: scale(1.05); /* Efeito de escala no hover */
+    transform: scale(1.05);
 }
 
-/* Botão Cancelar */
 .modal-content button.cancel {
     background-color: #3498db;
     color: white;
@@ -226,10 +216,9 @@
 
 .modal-content button.cancel:hover {
     background-color: #2980b9;
-    transform: scale(1.05); /* Efeito de escala no hover */
+    transform: scale(1.05);
 }
 
-/* Animação de Entrada */
 @keyframes fadeIn {
     from {
         opacity: 0;
