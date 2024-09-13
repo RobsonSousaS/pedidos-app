@@ -1,0 +1,55 @@
+<div class="pedido-container">
+  <h2 class="titulo">Lista de Pedidos</h2>
+
+  <!-- Mensagem quando não há pedidos -->
+  <p *ngIf="pedidos.length === 0" class="mensagem-sem-pedidos">
+    Ops, ainda não temos nenhum pedido.
+  </p>
+
+  <ul *ngIf="pedidos.length > 0" class="pedido-lista">
+    <li *ngFor="let pedido of pedidos" class="pedido-item">
+      <div class="pedido-detalhes">
+        <strong>ID: {{ pedido.id }}</strong>
+        <p><strong>Cliente:</strong> {{ pedido.cliente }}</p>
+        <p><strong>Mesa:</strong> {{ pedido.mesa }}</p>
+        <p><strong>Status:</strong> {{ pedido.status }}</p>
+
+        <!-- Itens do Pedido -->
+        <div class="pedido-items">
+          <div *ngFor="let item of pedido.items" class="pedido-item-info">
+            <strong>Item:</strong> {{ item.nome }} - Quantidade:
+            {{ item.quantidade }}
+          </div>
+        </div>
+      </div>
+      <div class="pedido-acoes">
+        <button class="btn-remover" (click)="openModal(pedido.id)">
+          Remover
+        </button>
+        <button
+          class="btn-atualizar"
+          (click)="pedido.id !== undefined && updatePedido(pedido.id)"
+        >
+          Atualizar
+        </button>
+      </div>
+    </li>
+  </ul>
+
+  <div class="add-pedido">
+    <a routerLink="/novo-pedido" class="btn-novo-pedido"
+      >Adicionar Novo Pedido</a
+    >
+  </div>
+
+  <!-- Modal de Confirmação -->
+  <div id="confirmModal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" (click)="closeModal()">&times;</span>
+      <h3>Confirmar Remoção</h3>
+      <p>Tem certeza que deseja remover este pedido?</p>
+      <button class="confirm" (click)="confirmDelete()">Sim, Remover</button>
+      <button class="cancel" (click)="closeModal()">Cancelar</button>
+    </div>
+  </div>
+</div>

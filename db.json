@@ -1,0 +1,16 @@
+{
+  "pedidos": [
+    {
+      "cliente": "oi",
+      "mesa": 1,
+      "items": [
+        {
+          "nome": "oi",
+          "quantidade": 1
+        }
+      ],
+      "status": "Em preparo",
+      "id": 2
+    }
+  ]
+}
